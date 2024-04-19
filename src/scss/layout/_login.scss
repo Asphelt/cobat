@@ -1,0 +1,141 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.fondo_alumno{
+    background-color: v.$blanco;
+    .index-area{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .index-container{
+          background-color: v.$theme-bg-secondary;
+          display: flex;
+          border-radius: v.$border;
+          flex-direction: row;
+          justify-content: center;
+          height: 90%;
+          width: 90%;
+          margin: 0 auto;
+          flex-wrap: wrap;
+      }
+      height: 45vh;
+      @include m.tablet(){
+          height: 100vh;
+      } 
+  }
+  
+  .index-hero{
+      flex: 1;
+      padding: 1.5rem 5rem;
+      text-align: center;
+      margin: 0 auto;
+      .hero-header{
+         span{
+          background-color: v.$theme-primary;
+          padding: 0rem 0.5rem;
+          border-radius: v.$border;
+          color: v.$blanco;
+         }
+         color: v.$theme-primary;
+         font-size: 3rem;
+  
+         @include m.tablet(){
+          font-size: 6rem;
+          }
+      }
+      .hero-img{
+          width: 100%;
+          @include m.tablet(){
+              width: 80%;
+          }
+          margin: 0 auto;
+      }
+      .hero-footer{
+          font-size: 4rem;
+          font-family: v.$font-header;
+          color: v.$theme-text;
+          font-weight: 700;
+      }
+  
+  
+  }
+  .index-login{
+      flex:1;
+      background-color: #ffffff;
+      padding: 1.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border-radius: v.$border;
+      .login-header{
+          font-size: 2rem;
+          font-weight: 700;
+          text-align: center;
+          @include m.tablet(){
+              font-size: 4rem;
+          }
+      }
+      .login-logo{
+          text-align: center;
+          img{
+              width: 10rem ;
+              @include m.tablet(){
+                  width: 15rem ;
+              }
+          }
+      }
+      .login-form{
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          margin: 0 auto;
+          width: 90%;
+          .formLogin-campo{
+              display: flex;
+              flex-direction: column;
+              gap:v.$gap;
+  
+              label{
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  text-transform: uppercase;
+              }
+              input, input[type="date"], input[type="email"], input[type="tel"], input[type="file"], input[type="text"], input[type="time"], textarea, select, option {
+                  padding: 1rem 1.5rem;
+                  color: v.$theme-text !important;
+                  border-radius: v.$border !important;
+                  border: 0.5px v.$theme-primary solid;
+                  font-size: 1.6rem !important;
+                  &:focus {
+                      border-color: rgb(165, 42, 26);
+                      box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+                      outline: 0 none;
+                 }
+                  
+                  flex-grow: 1;
+             }
+  
+          }
+          @include m.tablet(){
+              width: 70%;
+          }
+      }
+      .formLogin-footer{
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1rem;
+          img:first-child{
+              width: 50%;
+          }
+          img:last-child{
+              width: 5rem;
+          }
+      }
+  }
+}
+
